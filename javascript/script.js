@@ -1,15 +1,5 @@
-const promo = '20%';
+let x = 10
 
-switch (promo) {
-    case '10%':
-        console.log('promocja na 10%');
-        break;
-    case '20%': console.log('promocja na 20%');
-        break;
-    case '30%': console.log('promocja na 30%');
-        break;
+const check = (x % 2 == 0) ? 'X jest parzyste' : 'X nie jest parzyste'
 
-    default:
-        console.log('20 %');
-}
-
+console.log(check);
