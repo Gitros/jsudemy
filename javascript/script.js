@@ -1,6 +1,8 @@
-let x = 50;
-let y = 30;
+let color = 'blue';
+let newColor = 'green';
 
-if (x > y) {
-    console.log(`${x} jest większe niż ${y}`);
+if (color === newColor) {
+    console.log("kolory sie zgadzaja");
+} else {
+    console.log("kolory sie nie zgadzają");
 }
