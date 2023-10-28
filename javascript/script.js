@@ -1,5 +1,10 @@
-let x = 10
+let x = 100;
 
-const check = (x % 2 == 0) ? 'X jest parzyste' : 'X nie jest parzyste'
+if (x >= 100) {
+    console.log(('x > 100').toUpperCase());
+} else if (x < 100 && x > 30) {
+    console.log(("x jest średniakiem").toUpperCase());
+} else if (x <= 30) {
+    console.log(("x jest mały").toUpperCase());
+}
 
-console.log(check);
