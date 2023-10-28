@@ -1,9 +1,6 @@
-const pass = '2u8ur345678';
+let x = 50;
+let y = 30;
 
-if (pass.length > 10 && pass.includes('!')) {
-    console.log('Masze rewelacyjne  hasło');
-} else if (pass.length > 10) {
-    console.log("masz dobre hasło");
-} else {
-    console.log("masz za krótkie hasło");
+if (x > y) {
+    console.log(`${x} jest większe niż ${y}`);
 }
