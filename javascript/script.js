@@ -1,6 +1,6 @@
 let i = 0;
 
-while (i < 5) {
+do {
+    i++
     console.log(i);
-    i++;
-}
+} while (i < 2);
