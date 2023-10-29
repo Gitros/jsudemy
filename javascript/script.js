@@ -1,6 +1,6 @@
-let x = 0;
+let x = 20;
 
-while (x < 10) {
-    x += 2
+do {
+    x -= 3;
     console.log(x);
-}
+} while (x > 0);
