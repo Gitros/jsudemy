@@ -1,5 +1,6 @@
-const miasta = ['Rzeszów', 'Kraków', 'Warszawa', 'Katowice', 'Lublin'];
+let x = 0;
 
-for (let i = 0; i < miasta.length; i++) {
-    console.log(`To miasto nazywa się ${miasta[i]}`)
+while (x < 10) {
+    x += 2
+    console.log(x);
 }
