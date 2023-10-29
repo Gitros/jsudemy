@@ -1,10 +1,11 @@
-let x = 100;
+const animals = ['🙉', '😼', '🐶', '🐵', '🐺', '🐱'];
 
-if (x >= 100) {
-    console.log(('x > 100').toUpperCase());
-} else if (x < 100 && x > 30) {
-    console.log(("x jest średniakiem").toUpperCase());
-} else if (x <= 30) {
-    console.log(("x jest mały").toUpperCase());
+for (let i = 0; i < animals.length; i++) {
+    console.log(i);
 }
 
+// console.log(animals[2]);
+
+for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+}
