@@ -1,6 +1,9 @@
-let i = 0;
+const numbers = [1, 2, 3, 4, 5];
 
-do {
-    i++
-    console.log(i);
-} while (i < 2);
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i] * 2);
+// }
+
+for (const number of numbers) {
+    console.log(number * 2);
+}
