@@ -1,11 +1,6 @@
-const animals = ['🙉', '😼', '🐶', '🐵', '🐺', '🐱'];
+let i = 0;
 
-for (let i = 0; i < animals.length; i++) {
+while (i < 5) {
     console.log(i);
-}
-
-// console.log(animals[2]);
-
-for (let i = 0; i < animals.length; i++) {
-    console.log(animals[i]);
+    i++;
 }
