@@ -1,21 +1,17 @@
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [0, 0, 1, 1, 2, 2, 2]
+const colors = ['red', 'green', 'blue', true, 123]
+const cars = [123, true, 'audi', 'bmw', 'mercedes', 'ferrari', '🤷‍♂️', '👀']
 
-// function multiply(x) {
-//     return x * 2;
-// }
-// const newNumbers = numbers.map(multiply);
+let numbers2 = numbers.slice(2)
+console.log(numbers2);
 
-const abc = ['a', 'b', 'c'];
-const newAbc = numbers.concat(abc);
+let numbers3 = numbers.slice(-3);
+console.log(numbers3);
 
-console.log(newAbc);
+const randomStuff = colors.splice(-2);
+console.log(randomStuff);
+console.log(colors);
 
-console.log(...abc);
-
-const drinks = ['pepsi', 'kawa', 'sok'];
-const meals = ['pizza', 'spaghetti', 'zupa'];
-
-const menu = drinks.concat(meals)
-console.log(...menu);
-
-console.log(menu);
+const newCars = cars.splice(2, 4, 'test')
+console.log(newCars);
+console.log(cars);
