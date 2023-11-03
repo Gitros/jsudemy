@@ -1,8 +1,14 @@
-const numbers = [1, 2, 3, 4]
-const food = ['pizza', 'spaghetti', 'onions', 'fries'];
-const menu = numbers.concat(food);
+const numbers = [1, 5, 13, 26, 48];
 
-console.log(menu);
+const mapNumbers = numbers.map(number => number * 5);
 
-const menu2 = [...numbers, ...food]
-console.log(menu2);
+console.log(mapNumbers);
+
+for (number of mapNumbers) {
+    if (number % 2 === 0) {
+        console.log(`liczba parzysta ${number}`);
+    }
+    else {
+        console.log(`liczba nie parzysta ${number}`);
+    }
+}
