@@ -1,6 +1,8 @@
-const letters = ['c', 'd'];
+const numbers = [1, 2, 3, 4]
+const food = ['pizza', 'spaghetti', 'onions', 'fries'];
+const menu = numbers.concat(food);
 
-letters.unshift('a', 'b');
-letters.push('e', 'f')
+console.log(menu);
 
-console.log(letters.includes('c'));
+const menu2 = [...numbers, ...food]
+console.log(menu2);
