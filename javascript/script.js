@@ -1,7 +1,6 @@
-const numbers = [0, 1, 2, 3];
+const letters = ['c', 'd'];
 
-const newNumbers = numbers.forEach(number => console.log(number * 2))
+letters.unshift('a', 'b');
+letters.push('e', 'f')
 
-const mapNumbers = numbers.map(number => number * 2)
-
-console.log(mapNumbers);
+console.log(letters.includes('c'));
