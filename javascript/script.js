@@ -1,14 +1,8 @@
-const numbers = [1, 5, 13, 26, 48];
+const color = ['niebieski'];
 
-const mapNumbers = numbers.map(number => number * 5);
+color.push('czerwony');
+color.unshift('fioletowy');
 
-console.log(mapNumbers);
-
-for (number of mapNumbers) {
-    if (number % 2 === 0) {
-        console.log(`liczba parzysta ${number}`);
-    }
-    else {
-        console.log(`liczba nie parzysta ${number}`);
-    }
+for (let i = 0; i < color.length; i++) {
+    console.log(`Mój ulubiony kolor to: ${color[i].charAt(0).toUpperCase() + color[i].slice(1)}`);
 }
