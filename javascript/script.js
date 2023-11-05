@@ -1,14 +1,21 @@
-const numbers = [0.5, 4, 'abc'];
-const names = ['lisa', 'lily', 'adam', 'przemek'];
+let score = 0;
 
-numbers.forEach(num => console.log(num * num));
 
-const bigNames = names.map(name => name.toUpperCase());
-console.log(bigNames);
 
-const showBigNames = (names) => {
-    console.log(names.toUpperCase());
+const add = (x, y) => {
+    score = x + y;
+    if (score % 2 === 0) {
+        even(score);
+    } else {
+        odd(score);
+    }
 }
 
-names.forEach(showBigNames)
+const even = score => {
+    console.log(`Liczba ${score} jest parzysta`);
+}
+const odd = score => {
+    console.log(`Liczba ${score} jest nie parzysta`);
+}
 
+add(2, 4)
