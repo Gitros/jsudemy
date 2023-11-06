@@ -1,11 +1,9 @@
-//getElementById
-const test = document.getElementById('item');
-console.log(test);
-//getElementsByTagName
-const test2 = document.getElementsByClassName('ul');
-console.log(test2);
+// //getElementById
+// const test = document.getElementById('item');
 
-//getElementsByClassName
+// //getElementsByTagName
+// const test2 = document.getElementsByClassName('ul');
 
-const test3 = document.getElementsByClassName('test');
-console.log(test3);
+// //getElementsByClassName
+// const test3 = document.getElementsByClassName('test');
+
