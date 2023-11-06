@@ -1,23 +1,19 @@
-const addBtn = document.querySelector('.add');
-const removeBtn = document.querySelector('.remove');
-const toggleBtn = document.querySelector('.toggle');
-const text = document.querySelector('p');
+const body = document.querySelector('body');
+const ul = document.createElement('ul');
+const li = document.createElement('li');
 
-const addClass = () => {
-    text.classList.add('test')
+body.appendChild(ul);
+
+for (let i = 1; i <= 10; i++) {
+    const li = document.createElement('li');
+    ul.append(li);
+    li.textContent = `${i}`;
 }
 
-const removeClass = () => {
-    text.classList.remove('test')
-}
+let lastLi = ul.lastChild;
+lastLi.textContent = 'Jestem ostatnim elementem';
+lastLi.style.backgroundColor = 'blue';
+lastLi.style.padding = '20px 40px'
+lastLi.style.fontSize = '48px';
 
-
-const toggleClass = () => {
-    text.classList.toggle('test')
-}
-
-addBtn.addEventListener('click', addClass);
-removeBtn.addEventListener('click', removeClass);
-toggleBtn.addEventListener('click', toggleClass);
-
-
+console.log(lastLi);
