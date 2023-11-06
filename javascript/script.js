@@ -1,11 +1,15 @@
-const div = document.querySelector('div');
-const p = document.querySelector('p');
+const btn1 = document.querySelector('.btn-1');
+const btn2 = document.querySelector('.btn-2');
+const btn3 = document.querySelector('.btn-3');
 
-//removeChild
+btn1.addEventListener('click', function () {
+    console.log('kliknieto mnie!');
+})
 
-// div.removeChild(p);
+btn2.addEventListener('mouseover', () => console.log('najechano na mnie'));
 
-//remove
+const test = () => {
+    console.log('double click');
+}
 
-p.remove();
-div.remove();
+btn3.addEventListener('dblclick', test)
