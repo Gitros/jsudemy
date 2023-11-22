@@ -31,6 +31,8 @@ const prepareDomEvents = () => {
     addBtn.addEventListener('click', addNewTodo);
     ulList.addEventListener('click', checkClick);
     popupCloseBtn.addEventListener('click', closePopup);
+    popupAddBtn.addEventListener('click', changeTodoText);
+    todoInput.addEventListener('keyup', enterKeyCheck);
 }
 
 const addNewTodo = () => {
@@ -73,18 +75,48 @@ const checkClick = e => {
         e.target.closest('li').classList.toggle('completed');
         e.target.classList.toggle('completed');
     } else if (e.target.matches('.edit')) {
-        editTodo();
+        editTodo(e);
     } else if (e.target.matches('.delete')) {
-        e.target.closest('li').classList.toggle('delete');
+        deleteTodo(e);
     };
 }
 
-const editTodo = () => {
+const editTodo = e => {
+    todoToEdit = e.target.closest('li');
+    popupInput.value = todoToEdit.firstChild.textContent;
     popup.style.display = 'flex';
 }
 
 const closePopup = () => {
     popup.style.display = 'none';
+    popupInfo.textContent = '';
 }
+
+const changeTodoText = () => {
+    if (popupInput.value !== '') {
+        todoToEdit.firstChild.textContent = popupInput.value;
+        popup.style.display = 'none';
+        popupInfo.textContent = '';
+    } else {
+        popupInfo.textContent = 'Musisz podać jakąś treść!';
+    }
+}
+
+const deleteTodo = e => {
+    e.target.closest('li').remove();
+
+    const allTodos = ulList.querySelectorAll('li');
+
+    if (allTodos.length === 0) {
+        errorInfo.textContent = 'Brak zadan na liscie.'
+    }
+}
+
+const enterKeyCheck = e => {
+    if (e.key === 'Enter') {
+        addNewTodo();
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', main);
