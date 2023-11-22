@@ -3,6 +3,12 @@ let errorInfo; // info o braku zadań / konieczności wpisania tekstu
 let addBtn; // przycisk ADD - dodaje nowe elementy do listy
 let ulList; // lista zadań, tagi UL
 let newTodo; //nowo dodany LI nowe zadanie
+let popup; // popup
+let popupInfo; // tekst w popupie jak sie doda pusty tekst
+let todoToEdit; // edytowany todo
+let popupInput; // input w popupie
+let popupAddBtn; // przycisk "Zatwierdź" w popupie
+let popupCloseBtn; // przycisk "anuluj" w popupie
 
 const main = () => {
     prepareDOMElemnts();
@@ -14,11 +20,17 @@ const prepareDOMElemnts = () => {
     errorInfo = document.querySelector('.error-info');
     addBtn = document.querySelector('.btn-add');
     ulList = document.querySelector('.todolist ul');
+    popup = document.querySelector('.popup');
+    popupInfo = document.querySelector('.popup-info');
+    popupInput = document.querySelector('.popup-input');
+    popupAddBtn = document.querySelector('.accept');
+    popupCloseBtn = document.querySelector('.cancel');
 }
 
 const prepareDomEvents = () => {
     addBtn.addEventListener('click', addNewTodo);
     ulList.addEventListener('click', checkClick);
+    popupCloseBtn.addEventListener('click', closePopup);
 }
 
 const addNewTodo = () => {
@@ -61,11 +73,18 @@ const checkClick = e => {
         e.target.closest('li').classList.toggle('completed');
         e.target.classList.toggle('completed');
     } else if (e.target.matches('.edit')) {
-        e.target.closest('li').classList.toggle('edit');
+        editTodo();
     } else if (e.target.matches('.delete')) {
         e.target.closest('li').classList.toggle('delete');
     };
 }
 
+const editTodo = () => {
+    popup.style.display = 'flex';
+}
+
+const closePopup = () => {
+    popup.style.display = 'none';
+}
 
 document.addEventListener('DOMContentLoaded', main);
