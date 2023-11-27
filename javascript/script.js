@@ -1,15 +1,10 @@
-// const myObject = {
-//     key:value,
-//     key:value,
-//     key:value,
-// }
-
-const newUser = {
-    name: 'lisa',
+const user = {
+    name: 'Klaudia',
     age: 23,
-    car: {
-        brand: 'Audi',
-        model: 'A3',
-        color: 'czarny',
-    }
+    sex: 'female',
+    'hair-color': 'blonde',
+}
+
+for (const data in user) {
+    console.log(data + ' ' + user[data]);
 }
