@@ -1,21 +1,17 @@
-// konstruktor
+// Prototype
+
 function User(name, age) {
     this.name = name;
     this.age = age;
-
-    this.hello = function () {
-        console.log(`Cześć ${this.name}`);
-    }
 }
-
-const user = {
-    name: 'Klaudia',
-    age: 23,
-}
-console.log(user.name);
 
 const newUser = new User('Klaudia', 23);
 const newUser2 = new User('Lily', 34);
-console.log(newUser);
+const newUser3 = new User('Majek', 45);
 
-newUser2.hello()
+console.log(newUser, newUser2, newUser3);
+
+User.prototype.hello = function () {
+    console.log(`Cześć ${this.name}`);
+}
+newUser.hello();
