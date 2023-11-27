@@ -1,10 +1,8 @@
 const user = {
-    name: 'Klaudia',
-    age: 23,
-    sex: 'female',
-    'hair-color': 'blonde',
+    name: 'jakub',
+    showName() {
+        console.log(this.name);
+    }
 }
 
-for (const data in user) {
-    console.log(data + ' ' + user[data]);
-}
+user.showName();
